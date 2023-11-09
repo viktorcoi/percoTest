@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/percoTest/static/css/main.ddfd5bb2.css",
+    "main.css": "/percoTest/static/css/main.ab38a810.css",
     "main.js": "/percoTest/static/js/main.400a3dac.js",
     "static/media/logo.svg": "/percoTest/static/media/logo.b31f1bdffccab3979043985a1e69bac2.svg",
     "index.html": "/percoTest/index.html",
-    "main.ddfd5bb2.css.map": "/percoTest/static/css/main.ddfd5bb2.css.map",
+    "main.ab38a810.css.map": "/percoTest/static/css/main.ab38a810.css.map",
     "main.400a3dac.js.map": "/percoTest/static/js/main.400a3dac.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddfd5bb2.css",
+    "static/css/main.ab38a810.css",
     "static/js/main.400a3dac.js"
   ]
 }
