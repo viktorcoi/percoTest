@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/perkoTest/static/css/main.ddfd5bb2.css",
-    "main.js": "/perkoTest/static/js/main.5140bc54.js",
-    "static/media/logo.svg": "/perkoTest/static/media/logo.b31f1bdffccab3979043985a1e69bac2.svg",
-    "index.html": "/perkoTest/index.html",
-    "main.ddfd5bb2.css.map": "/perkoTest/static/css/main.ddfd5bb2.css.map",
-    "main.5140bc54.js.map": "/perkoTest/static/js/main.5140bc54.js.map"
+    "main.css": "/percoTest/static/css/main.ddfd5bb2.css",
+    "main.js": "/percoTest/static/js/main.400a3dac.js",
+    "static/media/logo.svg": "/percoTest/static/media/logo.b31f1bdffccab3979043985a1e69bac2.svg",
+    "index.html": "/percoTest/index.html",
+    "main.ddfd5bb2.css.map": "/percoTest/static/css/main.ddfd5bb2.css.map",
+    "main.400a3dac.js.map": "/percoTest/static/js/main.400a3dac.js.map"
   },
   "entrypoints": [
     "static/css/main.ddfd5bb2.css",
-    "static/js/main.5140bc54.js"
+    "static/js/main.400a3dac.js"
   ]
 }
