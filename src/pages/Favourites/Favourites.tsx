@@ -7,6 +7,9 @@ import { getListPeoples } from '../../store/fafouritePage/selecors/getListPeople
 import Button, { themeButton } from '../../components/ui/Button/Button';
 import { getListSelected } from '../../store/fafouritePage/selecors/getListSelected';
 import { FavouritePageActions } from '../../store/fafouritePage/slice/FavouritePageSlice';
+import Table from '../../components/ui/Table/Table';
+import THead from '../../components/ui/Table/THead/THead';
+import TRow from '../../components/ui/Table/TRow/TRow';
 
 const Favourites = () => {
    
@@ -14,6 +17,8 @@ const Favourites = () => {
 
     const listPeoples = useSelector(getListPeoples);
     const selected = useSelector(getListSelected);
+
+    const [view, setView] = useState(false);
 
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 10;
@@ -57,29 +62,43 @@ const Favourites = () => {
         <Container className={styles.wrapper}>
             <div className={styles.head}>
                 <h2 className={styles.title}>Favourites</h2>
+                <Button disabled={!listPeoples.length} onClick={() => setView((state => !state))} theme={themeButton.main}>{!view ? "Table" : "BLocks"}</Button>
                 <div className={styles.buttons}>
                     <Button disabled={!Boolean(selected.length)} 
                         theme={themeButton.main} onClick={handleActionSelected}
                     >
                         Remove selected
                     </Button>
-                    <Button
+                    <Button disabled={!listPeoples.length}
                         theme={themeButton.second} onClick={handleActionAll}
                     >
                         Remove favourites from this page
                     </Button>
                 </div>
             </div>
-
-            <div className={styles.list}>
-                {currentCards?.map((item, key) => (
-                    
-                    <UserCard key={key} data={Object(item)}
-                        handleSelect={handleSelect}
-                        checked={Boolean(selected.find((id) => id === item?.id))}
-                    />
-                ))}
-            </div>
+            {listPeoples.length ? !view ?
+                <div className={styles.list}>
+                    {currentCards?.map((item, key) => (
+                        <UserCard key={key} data={Object(item)}
+                            handleSelect={handleSelect}
+                            checked={Boolean(selected.find((id) => id === item?.id))}
+                        />
+                    ))}
+                </div>
+                :
+                <Table className={styles.table}>
+                    <THead listHead={['Select', 'Name', 'Height', 'Mass', 'Hair Color', 'Favourite']}/>
+                    <tbody>
+                        {currentCards?.map((item, key) => (
+                            <TRow key={key} data={Object(item)}
+                                handleSelect={handleSelect}
+                                checked={Boolean(selected.find((id) => id === item?.id))}
+                            />
+                        ))}
+                    </tbody>
+                </Table>
+                : <p className={styles.plug}>The favorites list is empty</p>
+            }
             {listPeoples.length > cardsPerPage ?
                 <div className={styles.pagination}>
                     <Button disabled={!prevPage} theme={themeButton.main} onClick={handlePrevPage}>{'< Prev'}</Button>

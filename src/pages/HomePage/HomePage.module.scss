@@ -1,10 +1,22 @@
 .wrapper {
     padding-top: 60px;
     padding-bottom: 60px;
+    @media (max-width: 800px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &__title {
         font-size: 36px;
         line-height: 36px;
         font-weight: 600;
+        @media (max-width: 800px) {
+            font-size: 32px;
+            line-height: 34px;
+        }
+        @media (max-width: 600px) {
+            font-size: 26px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -13,12 +25,28 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
+    @media (max-width: 800px) {
+        margin-top: 24px;
+        gap: 24px;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 16px;
+    }
     a {
         padding: 24px;
         display: block;
         height: 400px;
         background-color: var(--bg-color-second);
         border-radius: 20px;
+        @media (max-width: 800px) {
+            padding: 16px;
+            height: 300px;
+        }
+        @media (max-width: 600px) {
+            padding: 12px;
+            height: 200px;
+        }
         @media (any-hover: hover) {
             &:hover {
                 transform: scale(0.98);
@@ -29,30 +57,53 @@
             line-height: 46px;
             font-weight: 600;
             color: var(--color-text-second);
+            @media (max-width: 800px) {
+                font-size: 36px;
+                line-height: 40px;
+            }
+            @media (max-width: 600px) {
+                font-size: 30px;
+                line-height: 32px;
+            }
         }
         span {
             font-size: 180px;
             line-height: 190px;
             font-weight: 400;
             color: var(--bg-color-main);
+            @media (max-width: 800px) {
+                font-size: 120px;
+                line-height: 150px;
+            }
         }
     }
 }
 
-.peoples {
+.peoples, .favourites {
     background-repeat: no-repeat;
     background-size: 280px auto;
-    background-image: url("data:image/svg+xml,%3csvg width='48' height='32' viewBox='0 0 48 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_983_2)'%3e%3cpath d='M0 25.6004C0 20.7364 9.89864 18.2861 14.8572 18.2861C19.8157 18.2861 29.7143 20.7364 29.7143 25.6004V32.0004H0V25.6004Z' fill='%23232130'/%3e%3cpath d='M22.8555 8.00001C22.8555 12.42 19.2755 16 14.8555 16C10.4355 16 6.85547 12.42 6.85547 8.00001C6.85547 3.58 10.4355 0 14.8555 0C19.2755 0 22.8555 3.58 22.8555 8.00001Z' fill='%23232130'/%3e%3cpath d='M42.2841 12.5717C42.2841 15.7289 39.7269 18.286 36.5698 18.286C33.4126 18.286 30.8555 15.7289 30.8555 12.5717C30.8555 9.41457 33.4126 6.85742 36.5698 6.85742C39.7269 6.85742 42.2841 9.41457 42.2841 12.5717Z' fill='%23232130'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.9987 31.9999V25.5999C31.9987 24.0413 31.3912 22.7296 30.5352 21.6715C32.6497 20.9388 34.9518 20.5713 36.5701 20.5713C40.3844 20.5713 47.9987 22.6132 47.9987 26.6665V31.9999H31.9987Z' fill='%23232130'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_983_2'%3e%3crect width='48' height='32' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
     background-position: right bottom;
+    @media (max-width: 800px) {
+        background-size: 220px auto;
+    }
+    @media (max-width: 600px) {
+        background-size: max(30vw, 100px) auto;
+    }
+}
+
+.peoples {
+    background-image: url("data:image/svg+xml,%3csvg width='48' height='32' viewBox='0 0 48 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_983_2)'%3e%3cpath d='M0 25.6004C0 20.7364 9.89864 18.2861 14.8572 18.2861C19.8157 18.2861 29.7143 20.7364 29.7143 25.6004V32.0004H0V25.6004Z' fill='%23232130'/%3e%3cpath d='M22.8555 8.00001C22.8555 12.42 19.2755 16 14.8555 16C10.4355 16 6.85547 12.42 6.85547 8.00001C6.85547 3.58 10.4355 0 14.8555 0C19.2755 0 22.8555 3.58 22.8555 8.00001Z' fill='%23232130'/%3e%3cpath d='M42.2841 12.5717C42.2841 15.7289 39.7269 18.286 36.5698 18.286C33.4126 18.286 30.8555 15.7289 30.8555 12.5717C30.8555 9.41457 33.4126 6.85742 36.5698 6.85742C39.7269 6.85742 42.2841 9.41457 42.2841 12.5717Z' fill='%23232130'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.9987 31.9999V25.5999C31.9987 24.0413 31.3912 22.7296 30.5352 21.6715C32.6497 20.9388 34.9518 20.5713 36.5701 20.5713C40.3844 20.5713 47.9987 22.6132 47.9987 26.6665V31.9999H31.9987Z' fill='%23232130'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_983_2'%3e%3crect width='48' height='32' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .favourites {
-    background-repeat: no-repeat;
-    background-size: 280px auto;
     background-image: url("data:image/svg+xml,%3csvg width='48' height='32' viewBox='0 0 48 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_980_12)'%3e%3cpath d='M34.663 31.8773C34.4673 32.0098 34.2363 32.0805 34 32.0805C33.7637 32.0805 33.5327 32.0098 33.337 31.8773C30.1988 29.7812 17 20.4533 17 11.6524C17 0.296433 30.345 -1.52257 34 6.12743C37.655 -1.52257 51 0.296433 51 11.6524C51 20.455 37.8012 29.7812 34.663 31.8739V31.8773Z' fill='%23232130'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_980_12'%3e%3crect width='48' height='32' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-    background-position: right bottom;
 }
 
 .loader {
     margin-top: 20px;
+    @media (max-width: 800px) {
+        width: 100px;
+        height: 100px;
+        border-width: 20px;
+    }
 }

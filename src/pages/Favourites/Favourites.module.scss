@@ -4,23 +4,50 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    @media (max-width: 800px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .title {
     font-size: 36px;
-    line-height: 36px;
+    line-height: 38px;
     font-weight: 600;
+    @media (max-width: 800px) {
+        font-size: 32px;
+        line-height: 34px;   
+    }
+    @media (max-width: 600px) {
+        font-size: 26px;
+        line-height: 28px;
+    }
 }
 
 .head {
     display: flex;
+    align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 800px) {
+        gap: 16px;   
+    }
+    @media (max-width: 600px) {
+        gap: 12px;
+    }
 }
 
 .buttons {
     display: flex;
     gap: 12px;
+    @media (max-width: 800px) {
+        width: 100%;   
+    }
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .list {
@@ -28,10 +55,38 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     margin-top: 32px;
+    @media (max-width: 800px) {
+        margin-top: 24px;   
+        gap: 12px;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .pagination {
     margin-top: 20px;
     display: flex;
     gap: 12px;
+    @media (max-width: 800px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;   
+    }
+}
+
+.table {
+    margin-top: 32px;
+    @media (max-width: 800px) {
+        margin-top: 24px;   
+    }
+}
+
+.plug {
+    margin-top: 60px;
+    font-size: 46px;
+    color: var(--color-text-second);
+    font-weight: 600;
+    line-height: 52px;
+    text-align: center;
 }

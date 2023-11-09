@@ -1,7 +1,11 @@
 .search {
-    width: 30%;
+    flex-grow: 1;
     min-width: 300px;
     position: relative;
+    @media (max-width: 600px) {
+        min-width: 100%;
+        order: 1;
+    }
 }
 
 .input {
@@ -119,4 +123,8 @@
     font-weight: 600;
     text-align: center;
     color: var(--color-text-second);
+    @media (max-width: 600px) {
+        font-size: 22px;
+        line-height: 24px;
+    }
 }

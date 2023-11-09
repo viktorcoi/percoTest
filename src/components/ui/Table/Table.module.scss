@@ -1,0 +1,26 @@
+.wrapper {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    @media (any-hover: hover) {
+        &::-webkit-scrollbar {
+            height: 7px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--color-text-second);
+            border-radius: 20px;
+        }
+        &::-webkit-scrollbar-button {
+            height: auto;
+        }
+    }
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}

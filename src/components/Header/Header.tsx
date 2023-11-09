@@ -22,9 +22,11 @@ const Header = () => {
                 </Link>
                 <HeaderSearch/>
                 <nav className={styles.nav}>
-                    <Link className={styles.peoples} to='/peoples'>List</Link>
+                    <Link className={styles.peoples} to='/peoples'>
+                        <p>List</p>
+                    </Link>
                     <Link className={styles.like} to='/favourites'>
-                        Favourites
+                        <p>Favourites</p>
                         {!countFavourites ? <></> :
                             <span className={styles.like__count}>
                                 {Number(countFavourites) > 99 ? (`99+`) : String(countFavourites)}

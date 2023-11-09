@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FC } from 'react';
 import styles from './UserCard.module.scss';
 import { MainPeopleScheme, MainPeoplesActions } from '../../../store/mainPeoples/slice/MainPeoplesSlice';
@@ -30,15 +30,18 @@ const UserCard: FC<Props> = (props) => {
     } = props.data;
 
     const dispatch = useDispatch();
+    const location = useLocation();
 
     const handleFavourite = () => {
-        dispatch(MainPeoplesActions.setFavourite((id)));
+        if (location.pathname === '/peoples') {
+            dispatch(MainPeoplesActions.setFavourite((id)));
+        }
         dispatch(FavouritePageActions.setFavourites(data))
     }
 
     return (
         <div className={styles.wrapper}>
-            <Link to={`/peoples/${id}`} className={styles.link}></Link>
+            <Link to={`/peoples/${id}`} className={styles.link}/>
             <p><span>Name:</span> {name}</p>
             <p><span>Height:</span> {height}</p>
             <p><span>Mass:</span> {mass}</p>

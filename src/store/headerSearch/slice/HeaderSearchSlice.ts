@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { searchPeoples } from "../../../api/headerSearch/asyncThunks/searchPeoples";
 
 export interface HeaderSearchScheme {
     countPeoples: number;
