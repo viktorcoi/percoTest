@@ -1,3 +1,13 @@
+# Test task Perko
+The test task for the FrontEnd react developer vacancy for the Perko company was completed in React.
+<br/>
+<a href="https://viktorcoi.github.io/perkoTest/">Click here to view the git page online</a>
+- Adaptive layout up to 320px;
+- Cross-browser layout;
+- Styled scss preprocessor;
+- Modular styles are used;
+- The application is made on React (TypeScript);
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
