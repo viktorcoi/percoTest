@@ -1,6 +1,6 @@
 {
-  "homepage": "https://viktorcoi.github.io/perkoTest/",
-  "name": "my-app",
+  "homepage": "http://viktorcoi.github.io/perkoTest",
+  "name": "perco",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
