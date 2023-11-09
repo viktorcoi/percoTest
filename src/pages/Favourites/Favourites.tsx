@@ -47,11 +47,15 @@ const Favourites = () => {
     const handleActionSelected = () => {
         dispatch(FavouritePageActions.removeFavouritesArr(selected));
         dispatch(FavouritePageActions.clearSelected());
+        if (selected.length === currentCards.length) {
+            setCurrentPage(currentPage - 1);
+        }
     }
 
     const handleActionAll = () => {
         dispatch(FavouritePageActions.removeFavouritesArr(currentCards.map((item) => item.id)));
         dispatch(FavouritePageActions.clearSelected());
+        if (currentPage !== 1) setCurrentPage(currentPage - 1);
     }
 
     const handleSelect = (value: number) => {
