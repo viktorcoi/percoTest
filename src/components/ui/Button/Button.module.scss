@@ -1,0 +1,31 @@
+.button {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 8px 12px;
+    border-radius: 10px;
+    &:disabled {
+        opacity: .6;
+        pointer-events: none;
+    }
+}
+
+.main {
+    background-color: var(--bg-color-second);
+    border: 2px solid var(--bg-color-second);
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.second {
+    background-color: transparent;
+    border: 2px solid var(--bg-color-second);
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--bg-color-second);
+        }
+    }
+}

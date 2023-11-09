@@ -1,0 +1,24 @@
+.loader {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    border: 30px dashed transparent;
+    animation: 2s linear infinite loader;
+}
+
+.second {
+    border-color: var(--bg-color-main);
+}
+
+.main {
+    border-color: var(--bg-color-second);
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,122 @@
+.search {
+    width: 30%;
+    min-width: 300px;
+    position: relative;
+}
+
+.input {
+    position: relative;
+    input {
+        transition: .3s;
+        border: 1px solid var(--bg-color-second);
+        width: 100%;
+        background-color: var(--bg-color-second);
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        border-radius: 6px;
+        padding: 6px 42px;
+        color: var(--color-text-main);
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-image: url("data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z' stroke='%2358556E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+        background-position: 10px center;
+        &::placeholder {
+            color:var(--color-text-second);
+        }
+        &:focus {
+            border: 1px solid var(--color-text-second);
+        }
+    }
+}
+
+.clear {
+    position: absolute;
+    right: 10px; top: 0; bottom: 0;
+    margin: auto 0;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_994_13)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0C7.163 0 0 7.16 0 16C0 24.84 7.163 32 16 32C24.837 32 32 24.84 32 16C32 7.16 24.837 0 16 0ZM21.717 10.28C21.323 9.89003 20.686 9.89003 20.292 10.28L15.994 14.58L11.758 10.34C11.367 9.94997 10.733 9.94997 10.344 10.34C9.95299 10.73 9.95299 11.37 10.344 11.76L14.58 15.99L10.314 20.26C9.92103 20.65 9.92103 21.2899 10.314 21.6899C10.708 22.0799 11.346 22.0799 11.74 21.6899L16.006 17.42L20.242 21.66C20.633 22.05 21.267 22.05 21.657 21.66C22.048 21.27 22.048 20.63 21.657 20.24L17.42 16.01L21.717 11.71C22.11 11.31 22.11 10.68 21.717 10.28Z' fill='%2358556E'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_994_13'%3e%3crect width='32' height='32' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: unset;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-image: url("data:image/svg+xml,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_993_8)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0C7.163 0 0 7.16 0 16C0 24.84 7.163 32 16 32C24.837 32 32 24.84 32 16C32 7.16 24.837 0 16 0ZM21.717 10.28C21.323 9.89003 20.686 9.89003 20.292 10.28L15.994 14.58L11.758 10.34C11.367 9.94997 10.733 9.94997 10.344 10.34C9.95299 10.73 9.95299 11.37 10.344 11.76L14.58 15.99L10.314 20.26C9.92103 20.65 9.92103 21.2899 10.314 21.6899C10.708 22.0799 11.346 22.0799 11.74 21.6899L16.006 17.42L20.242 21.66C20.633 22.05 21.267 22.05 21.657 21.66C22.048 21.27 22.048 20.63 21.657 20.24L17.42 16.01L21.717 11.71C22.11 11.31 22.11 10.68 21.717 10.28Z' fill='%23204289'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_993_8'%3e%3crect width='32' height='32' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+        }
+    }    
+}
+
+.results {
+    transition: .3s;
+    position: absolute;
+    top: 42px; left: 0; right: 0;
+    border-radius: 6px;
+    background-color: var(--bg-color-second);
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    overflow: auto;
+    box-shadow: 2px 12px 24px #000000a6;
+    transform: translateY(-6px);
+    padding: 0 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    &.show {
+        opacity: 1;
+        padding: 16px 8px;
+        visibility: visible;
+        pointer-events: unset;
+        transform: unset;
+    }
+    a {
+        border-radius: 6px;
+        padding: 6px 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--bg-color-main);
+            }
+        }
+    }
+    @media (any-hover: hover) {
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--color-text-second);
+            border-radius: 20px;
+        }
+        &::-webkit-scrollbar-button {
+            height: auto;
+        }
+    }
+}
+
+.loader {
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.plug {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text-second);
+}
