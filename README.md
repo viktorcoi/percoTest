@@ -1,7 +1,7 @@
 # Test task Perko
 The test task for the FrontEnd react developer vacancy for the Perko company was completed in React.
 <br/>
-<a href="https://viktorcoi.github.io/perkoTest/">Click here to view the git page online</a>
+<a href="https://perco.vercel.app/">Click here to view the git page online</a>
 - Adaptive layout up to 320px;
 - Cross-browser layout;
 - Styled scss preprocessor;
