@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/perkoTest/static/css/main.4a5ad00c.css",
+    "main.js": "/perkoTest/static/js/main.5140bc54.js",
+    "static/media/logo.svg": "/perkoTest/static/media/logo.b31f1bdffccab3979043985a1e69bac2.svg",
+    "index.html": "/perkoTest/index.html",
+    "main.4a5ad00c.css.map": "/perkoTest/static/css/main.4a5ad00c.css.map",
+    "main.5140bc54.js.map": "/perkoTest/static/js/main.5140bc54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a5ad00c.css",
+    "static/js/main.5140bc54.js"
+  ]
+}
